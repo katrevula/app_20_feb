@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Interactive App</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <main class="container-fluid">
+
+    <h1> Temperature Converter </h1>
+    <h3> Given temp in C, display temp in K </h3>
+
+    <p>Enter Temperature in degC:
+      <input id="firstNumber" type="number" value="7">
+    </p>
+
+    <button id="clicker" class="btn btn-primary">Click me!</button>
+
+    <p id="result"></p>
+
+  </main>
+
+  <script>
+    console.log('SCRIPT START')
+
+    console.log('Declare testable functions.....................')
+
+    
+
+    function add(x, y) {
+      return x + y
+    }
+    console.log('Defined add=' + add)
+
+    console.log('Declare event listeners .......................')
+
+    document.getElementById('clicker').addEventListener('click', function () {
+
+
+
+
+      const i = parseInt(document.getElementById('firstNumber').value)
+      console.log('i=' + i)
+      const j = -273.15;  // Temperature conversion value from Centigrade to kelvin
+      const ans = 'Temperature in Kelvin is ' + add(i, j) + '.'
+      document.getElementById('result').innerHTML = ans
+    })
+
+    console.log('SCRIPT END')
+  </script>
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+</body>
+
+</html>
